@@ -1,0 +1,397 @@
+aid: universal-music-group
+name: Universal Music Group
+type: Index
+specificationVersion: '0.19'
+description: >-
+  Universal Music Group N.V. (UMG) is the world's largest music company,
+  headquartered in Hilversum, Netherlands with operational headquarters in
+  Santa Monica, California. Spun off from Vivendi and listed on Euronext
+  Amsterdam (ticker: UMG) on September 21, 2021 at a EUR 54 billion valuation,
+  UMG operates Recorded Music, Music Publishing (Universal Music Publishing
+  Group / UMPG), and Merchandising (Bravado), plus film and television
+  production (PolyGram Entertainment) and the artist services and catalog
+  arm Universal Music Enterprises. The company is led by Chairman and CEO
+  Sir Lucian Grainge. Major label families include Republic Corps (Republic,
+  Island, Def Jam), Interscope Capitol Labels Group (Interscope, Geffen, A&M,
+  Capitol, Blue Note, Motown), Virgin Music Group, Verve Label Group (Verve,
+  Decca, Deutsche Grammophon, Impulse!, Philips), UMG Nashville (MCA Nashville,
+  Mercury Nashville, EMI Records Nashville, Capitol Records Nashville),
+  Universal Music Latin Entertainment, and Universal Music UK. Catalog scale
+  exceeds 3 million recordings and 4 million compositions. Ownership is split
+  among Bolloré / Vivendi (~28%), Tencent Music (~11%), Pershing Square (~10%),
+  and the public float. UMG operates no public developer portal: catalog and
+  metadata reach developers only indirectly through downstream DSPs (Spotify,
+  Apple Music, YouTube, Amazon Music) and through partner / aggregator
+  programs (7digital exposed UMG catalog under a partner API; that integration
+  is the only third-party developer-facing surface that has ever been openly
+  documented). Royalty and publishing portals (UMG Royalty Portal, UMPG Window)
+  exist for songwriters and rights holders behind authentication, not as APIs.
+  AI is the active integration vector in 2025-2026: UMG has announced licensed
+  generative-music partnerships with Udio, Splice, KLAY Vision, SoundLabs,
+  ProRata, BandLab, YouTube, TikTok, Meta, and KDDI, and has filed 15+ AI
+  patents with Liquidax Capital across collaboration, rights management, music
+  & health, and AI threat protection. These integrations operate through
+  bilateral commercial agreements, not a self-serve developer program. The
+  official Universal-Music-Group GitHub organization (created May 15, 2024)
+  has 0 public repositories.
+url: https://raw.githubusercontent.com/api-evangelist/universal-music-group/refs/heads/main/apis.yml
+humanURL: https://www.universalmusic.com
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - AI Licensing
+  - Big Three
+  - Catalog
+  - Entertainment
+  - Generative Music
+  - Licensing
+  - Major Label
+  - Merchandising
+  - Music
+  - Music Publishing
+  - Recorded Music
+  - Royalties
+  - Streaming
+
+apis:
+  - aid: universal-music-group:umg-corporate
+    name: UMG Corporate Web Surface
+    description: >-
+      The universalmusic.com corporate site is the public-facing surface for
+      Universal Music Group. It catalogs UMG's labels, divisions, news,
+      sustainability, careers, and investor relations content. The site is
+      a marketing and brand surface; no JSON or REST endpoints, no developer
+      documentation, and no API key issuance are exposed. The catalog of
+      artists, releases, and recordings is not surfaced as a queryable API.
+    humanURL: https://www.universalmusic.com
+    baseURL: https://www.universalmusic.com
+    tags:
+      - Brand
+      - Corporate
+      - News
+    properties:
+      - type: Website
+        url: https://www.universalmusic.com
+      - type: AboutUs
+        url: https://www.universalmusic.com/about/
+      - type: News
+        url: https://www.universalmusic.com/news/
+      - type: Labels
+        url: https://www.universalmusic.com/labels/
+
+  - aid: universal-music-group:umg-royalty-portal
+    name: UMG Royalty Portal
+    description: >-
+      Authenticated royalty statement portal for UMG-distributed artists and
+      labels. Provides login-gated access to royalty statements, statement
+      history, and supporting documentation. The portal is delivered as a
+      web application; no public REST API, no OAuth program, and no
+      machine-readable royalty feed are published. Access is provisioned
+      through label and business-affairs channels rather than developer
+      sign-up.
+    humanURL: https://umgroyalty.com
+    baseURL: https://umgroyalty.com
+    tags:
+      - Authenticated
+      - Royalties
+      - Statements
+    properties:
+      - type: Portal
+        url: https://umgroyalty.com
+      - type: Documentation
+        url: https://umgroyalty.com/includes/UserGuide.pdf
+      - type: Support
+        url: https://support.umgroyalty.com/hc/en-us
+
+  - aid: universal-music-group:umpg-window
+    name: UMPG Window
+    description: >-
+      Universal Music Publishing Group's songwriter and client royalty portal,
+      providing real-time access to earnings, statements, registrations, and
+      catalog data for UMPG-signed songwriters and publisher administration
+      clients. Authenticated, login-gated; no public API, OAuth surface, or
+      developer documentation. The UMPG Window iOS and Android apps wrap the
+      same authenticated surface.
+    humanURL: https://umpgwindow.com
+    baseURL: https://umpgwindow.com
+    tags:
+      - Authenticated
+      - Compositions
+      - Music Publishing
+      - Royalties
+      - Songwriters
+    properties:
+      - type: Portal
+        url: https://umpgwindow.com
+      - type: Website
+        url: https://www.umusicpub.com
+
+  - aid: universal-music-group:bravado-merch
+    name: Bravado Merchandise Storefronts
+    description: >-
+      Bravado is UMG's global merchandise and brand-management division,
+      operating direct-to-consumer artist merchandise storefronts and tour
+      merchandise for UMG's roster. Each artist store is delivered via
+      e-commerce platforms (typically Shopify) under artist-branded domains
+      coordinated by Bravado. No Bravado-branded public developer API,
+      catalog feed, or partner program is documented; integrations to retail
+      and platform partners operate through bilateral commercial agreements.
+    humanURL: https://www.bravado.com
+    baseURL: https://www.bravado.com
+    tags:
+      - Brand Management
+      - E-Commerce
+      - Merchandise
+      - Tour
+    properties:
+      - type: Website
+        url: https://www.bravado.com
+
+  - aid: universal-music-group:partner-dsp-feeds
+    name: UMG Catalog Delivery to DSPs
+    description: >-
+      UMG's recorded-music catalog reaches developers and end users almost
+      exclusively through downstream Digital Service Providers (Spotify,
+      Apple Music, Amazon Music, YouTube Music, Tidal, Deezer, Pandora,
+      etc.). UMG delivers audio, video, and metadata to those platforms
+      through private ingest pipelines (industry-standard DDEX ERN / RIN /
+      MEAD messaging delivered over SFTP or vendor-specific APIs). End
+      developers query UMG-owned content through each DSP's own public API,
+      not through any UMG-branded API surface. UMG itself publishes no
+      DSP-style public catalog API.
+    humanURL: https://www.universalmusic.com
+    baseURL: https://www.universalmusic.com
+    tags:
+      - Catalog
+      - DDEX
+      - Distribution
+      - DSP
+      - Metadata
+    properties:
+      - type: ReferenceStandard
+        url: https://ddex.net/
+      - type: PartnerProgram
+        url: https://www.universalmusic.com/contact/
+
+  - aid: universal-music-group:partner-7digital
+    name: 7digital UMG Catalog API (Partner Surface)
+    description: >-
+      7digital operates a B2B catalog and media-delivery API that includes
+      UMG-licensed recordings for hackathon and partner use. This is the
+      closest thing to a publicly documented developer surface for UMG
+      catalog content, but the endpoint, authentication, and commercial
+      terms are owned and operated by 7digital, not UMG. UMG itself
+      neither documents nor distributes API keys for this surface.
+    humanURL: https://7digital.gitbook.io/api-doc
+    baseURL: https://api.7digital.com
+    tags:
+      - Aggregator
+      - Catalog
+      - Partner API
+      - Recorded Music
+    properties:
+      - type: Documentation
+        url: https://7digital.gitbook.io/api-doc
+      - type: PartnerOf
+        url: https://www.7digital.com
+
+  - aid: universal-music-group:ai-licensing-program
+    name: UMG AI Licensing Program
+    description: >-
+      UMG's "Artist Centric AI" framework governs licensed access to UMG's
+      recordings and compositions by generative-AI music platforms. The
+      program is operated as a series of bilateral commercial agreements,
+      not as a self-serve developer program. As of 2025-2026, announced
+      partners include Udio (licensed generative platform with catalog
+      training and remixing rights), Splice (AI music tools for artists),
+      SoundLabs, KLAY Vision, ProRata, BandLab Technologies (ethical AI
+      framework), YouTube (AI Music Principles), TikTok, Meta, and KDDI.
+      Liquidax Capital co-develops UMG's AI patent portfolio (15+ filings
+      across musical collaboration, multimedia content, music & health,
+      AI threat protection, and rights management). No public OpenAPI,
+      no token issuance, no sandbox.
+    humanURL: https://www.universalmusic.com
+    baseURL: https://www.universalmusic.com
+    tags:
+      - AI
+      - Generative Music
+      - Licensing
+      - Partnerships
+      - Rights Management
+    properties:
+      - type: PartnerProgram
+        url: https://www.universalmusic.com/contact/
+      - type: PressRoom
+        url: https://www.universalmusic.com/news/
+
+  - aid: universal-music-group:github-org
+    name: Universal-Music-Group GitHub Organization
+    description: >-
+      Official UMG GitHub organization (login Universal-Music-Group, org id
+      169924279), created May 15, 2024. As of profiling, the org has 0
+      public repositories, 0 public gists, 0 followers, no bio, no blog,
+      no email, and no published members. The organization exists as a
+      brand placeholder; UMG's engineering output is not published openly.
+      An unrelated GitHub login `umg` (with 51 repos) is gated behind UMG
+      single-sign-on and is also not an open developer surface.
+    humanURL: https://github.com/Universal-Music-Group
+    baseURL: https://api.github.com/users/Universal-Music-Group
+    tags:
+      - GitHub
+      - Source Code
+    properties:
+      - type: GitHubOrganization
+        url: https://github.com/Universal-Music-Group
+      - type: ProfileAPI
+        url: https://api.github.com/users/Universal-Music-Group
+
+common:
+  - type: Website
+    url: https://www.universalmusic.com
+  - type: AboutUs
+    url: https://www.universalmusic.com/about/
+  - type: News
+    url: https://www.universalmusic.com/news/
+  - type: Labels
+    url: https://www.universalmusic.com/labels/
+  - type: Careers
+    url: https://www.universalmusic.com/careers/
+  - type: ContactUs
+    url: https://www.universalmusic.com/contact/
+  - type: InvestorRelations
+    url: https://www.universalmusic.com/investors/
+  - type: TermsOfService
+    url: https://www.universalmusic.com/terms/
+  - type: PrivacyPolicy
+    url: https://www.universalmusic.com/privacy-policy/
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/universalmusicgroup
+  - type: GitHubOrganization
+    url: https://github.com/Universal-Music-Group
+  - type: GitHubRepository
+    url: https://github.com/api-evangelist/universal-music-group
+  - type: Stock
+    url: https://live.euronext.com/en/product/equities/NL0015000IY2-XAMS
+  - type: ParentCompany
+    name: Independent (Euronext Amsterdam, ticker UMG); spun off from Vivendi 21 September 2021
+  - type: Subsidiary
+    data:
+      - name: Universal Music Publishing Group
+        description: Global music publishing arm; songwriter signings, catalog administration, and sync licensing.
+        url: https://www.umusicpub.com
+      - name: Bravado
+        description: Global merchandise and brand-management division for UMG's artist roster.
+        url: https://www.bravado.com
+      - name: PolyGram Entertainment
+        description: Film, television, and documentary production division producing music-led content.
+        url: https://www.universalmusic.com/labels/polygram-entertainment/
+      - name: Universal Music Enterprises
+        description: Catalog-marketing division managing reissues, compilations, and legacy artist releases.
+      - name: Mercury Studios
+        description: Music film, documentary, and video production label.
+        url: https://www.mercurystudios.co
+  - type: LabelFamily
+    data:
+      - name: Republic Corps
+        description: Republic Records, Island Records, Def Jam Recordings.
+      - name: Interscope Capitol Labels Group
+        description: Interscope Geffen A&M, Capitol Records, Blue Note Records, Motown, Capitol Christian Music Group, Priority Records.
+      - name: Virgin Music Group
+        description: Virgin Records, mtheory, PIAS, Integral, Caroline, Fiction, Fontana; UMG's label-services / independent-distribution arm.
+      - name: Verve Label Group
+        description: Verve Records, Decca Records, Deutsche Grammophon, Impulse!, Philips, Brunswick, GRP, Verve Forecast.
+      - name: UMG Nashville
+        description: MCA Nashville, Mercury Nashville, EMI Records Nashville, Capitol Records Nashville.
+      - name: Universal Music Latin Entertainment
+        description: Universal Music Latino, Disa, Fonovisa, Machete Music.
+      - name: Universal Music UK
+        description: EMI Records UK, Polydor UK, Island UK, Decca UK, 0207 Def Jam, EMI North.
+      - name: Abbey Road Studios
+        description: Historic London recording studios owned by UMG.
+  - type: Features
+    data:
+      - name: Recorded Music Catalog
+        description: Over 3 million recordings spanning UMG's label families, distributed to DSPs via private DDEX-based ingest pipelines.
+      - name: Music Publishing Catalog
+        description: Over 4 million compositions administered by Universal Music Publishing Group across writer signings and acquired catalogs.
+      - name: Merchandise (Bravado)
+        description: Direct-to-consumer artist merchandise storefronts and tour merch operated by the Bravado division.
+      - name: Film and Television
+        description: Music-led films, documentaries, and series produced under PolyGram Entertainment and Mercury Studios.
+      - name: Royalty Portals
+        description: Authenticated royalty-statement portals (UMG Royalty Portal for recordings, UMPG Window for publishing) for artists, labels, and songwriters.
+      - name: Licensed AI Partnerships
+        description: Commercial AI-music licensing program covering Udio, Splice, SoundLabs, KLAY Vision, ProRata, BandLab, YouTube, TikTok, Meta, and KDDI.
+      - name: AI Patent Portfolio
+        description: 15+ AI patents filed with Liquidax Capital spanning collaboration, multimedia content, music & health, AI threat protection, and rights management.
+  - type: UseCases
+    data:
+      - name: Streaming Catalog Access
+        description: End-user and developer access to UMG's recorded-music catalog occurs through downstream DSPs (Spotify, Apple Music, YouTube Music, Amazon Music, Tidal), each of which publishes its own developer API.
+      - name: Sync Licensing
+        description: Film, TV, advertising, and game producers license UMG recordings and UMPG compositions through bilateral business-affairs negotiation, not through a self-serve API.
+      - name: Royalty Reporting
+        description: Artists, labels, and songwriters access royalty statements through the authenticated UMG Royalty Portal and UMPG Window apps.
+      - name: AI Training and Generation Licensing
+        description: Licensed AI platforms (Udio, Splice, SoundLabs, etc.) access UMG content under bilateral commercial agreements that govern training, generation, and downstream remixing rights.
+      - name: Merchandise Distribution
+        description: Direct-to-consumer fan commerce operated by Bravado on behalf of UMG's artist roster.
+  - type: Integrations
+    data:
+      - name: DDEX
+        description: Industry-standard messaging suite (ERN for release notification, RIN for recording information, MEAD for media-enrichment, DSR for sales reporting) used by UMG to deliver content to DSPs.
+        url: https://ddex.net/
+      - name: Spotify
+        description: Catalog delivered to Spotify via DDEX; developers query UMG catalog through Spotify Web API rather than any UMG-branded API.
+      - name: Apple Music
+        description: Catalog delivered to Apple Music; downstream developer access via Apple Music API.
+      - name: YouTube / YouTube Music
+        description: Catalog and AI Music Principles partnership covering UGC matching, music identification, and licensed AI-music experiments.
+      - name: TikTok
+        description: Licensed music partnership covering catalog availability and AI-related provisions.
+      - name: Meta
+        description: Licensed music agreements covering Facebook, Instagram, and emerging AI surfaces.
+      - name: KDDI
+        description: Japan telecom partner; AI-related licensed-music agreement.
+      - name: Udio
+        description: Licensed generative-AI music platform; UMG strategic partner under Artist Centric AI framework.
+      - name: Splice
+        description: AI music-tools partner for UMG-roster artist tooling.
+      - name: SoundLabs
+        description: Voice-model and AI-music partner.
+      - name: KLAY Vision
+        description: AI-music platform partner.
+      - name: ProRata
+        description: AI training / rights attribution partner.
+      - name: BandLab Technologies
+        description: Partner on ethical-AI framework for songwriters and artists (Oct 2023 agreement).
+      - name: Liquidax Capital
+        description: IP asset-management and advisory firm co-developing UMG's AI patent portfolio (15+ filings).
+      - name: 7digital
+        description: Partner aggregator that exposes UMG catalog under a B2B API used in hackathons and embedded media partners.
+      - name: Drupal
+        description: UMG runs Drupal-based corporate properties (organization listed at drupal.org/UMG).
+
+absences:
+  - name: No Public Developer Portal
+    description: No developer.universalmusic.com, no api.universalmusic.com, no api keys, no OAuth program, no sandbox, no rate-limit documentation.
+  - name: No Public OpenAPI / AsyncAPI
+    description: UMG has never published an OpenAPI, AsyncAPI, JSON Schema, or Postman collection. Catalog and metadata exchange happens privately via DDEX over SFTP/vendor APIs.
+  - name: No Public SDKs
+    description: No first-party language SDKs in any package registry (npm, PyPI, Maven, NuGet, RubyGems, crates.io, Go modules).
+  - name: Empty Official GitHub Organization
+    description: github.com/Universal-Music-Group exists (created May 15 2024) with 0 public repositories, 0 gists, 0 followers, and no bio.
+  - name: No Public Changelog / Status Page
+    description: No api.umg.com/status, no public status.universalmusic.com, no machine-readable changelog.
+  - name: No Public Pricing
+    description: No published API pricing because no API exists. Licensing, royalty, and AI-partnership terms are negotiated privately under NDA.
+  - name: No Public RSS / Atom
+    description: Corporate news is published as HTML pages on universalmusic.com without a published RSS feed in standard well-known locations.
+  - name: No Webhooks
+    description: No publicly documented webhook program for any UMG surface (royalty events, release notifications, content drops).
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+
+created: '2026-05-23'
+modified: '2026-05-23'
