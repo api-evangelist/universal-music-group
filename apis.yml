@@ -36,7 +36,7 @@ description: >-
   has 0 public repositories.
 url: https://raw.githubusercontent.com/api-evangelist/universal-music-group/refs/heads/main/apis.yml
 humanURL: https://www.universalmusic.com
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - AI Licensing
   - Big Three
