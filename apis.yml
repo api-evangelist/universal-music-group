@@ -245,6 +245,8 @@ apis:
         url: https://api.github.com/users/Universal-Music-Group
 
 common:
+  - type: DomainSecurity
+    url: security/universal-music-group-domain-security.yml
   - type: Website
     url: https://www.universalmusic.com
   - type: AboutUs
@@ -370,6 +372,8 @@ common:
         description: Partner aggregator that exposes UMG catalog under a B2B API used in hackathons and embedded media partners.
       - name: Drupal
         description: UMG runs Drupal-based corporate properties (organization listed at drupal.org/UMG).
+  - url: https://www.universalmusic.com/feed/
+    type: Blog
 
 absences:
   - name: No Public Developer Portal
