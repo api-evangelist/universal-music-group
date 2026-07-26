@@ -1,6 +1,17 @@
 aid: universal-music-group
 name: Universal Music Group
 type: Index
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.19'
 description: >-
   Universal Music Group N.V. (UMG) is the world's largest music company,
@@ -36,7 +47,7 @@ description: >-
   has 0 public repositories.
 url: https://raw.githubusercontent.com/api-evangelist/universal-music-group/refs/heads/main/apis.yml
 humanURL: https://www.universalmusic.com
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/universal-music-group.png
 tags:
   - AI Licensing
   - Big Three
@@ -53,31 +64,6 @@ tags:
   - Streaming
 
 apis:
-  - aid: universal-music-group:umg-corporate
-    name: UMG Corporate Web Surface
-    description: >-
-      The universalmusic.com corporate site is the public-facing surface for
-      Universal Music Group. It catalogs UMG's labels, divisions, news,
-      sustainability, careers, and investor relations content. The site is
-      a marketing and brand surface; no JSON or REST endpoints, no developer
-      documentation, and no API key issuance are exposed. The catalog of
-      artists, releases, and recordings is not surfaced as a queryable API.
-    humanURL: https://www.universalmusic.com
-    baseURL: https://www.universalmusic.com
-    tags:
-      - Brand
-      - Corporate
-      - News
-    properties:
-      - type: Website
-        url: https://www.universalmusic.com
-      - type: AboutUs
-        url: https://www.universalmusic.com/about/
-      - type: News
-        url: https://www.universalmusic.com/news/
-      - type: Labels
-        url: https://www.universalmusic.com/labels/
-
   - aid: universal-music-group:umg-royalty-portal
     name: UMG Royalty Portal
     description: >-
@@ -146,32 +132,6 @@ apis:
       - type: Website
         url: https://www.bravado.com
 
-  - aid: universal-music-group:partner-dsp-feeds
-    name: UMG Catalog Delivery to DSPs
-    description: >-
-      UMG's recorded-music catalog reaches developers and end users almost
-      exclusively through downstream Digital Service Providers (Spotify,
-      Apple Music, Amazon Music, YouTube Music, Tidal, Deezer, Pandora,
-      etc.). UMG delivers audio, video, and metadata to those platforms
-      through private ingest pipelines (industry-standard DDEX ERN / RIN /
-      MEAD messaging delivered over SFTP or vendor-specific APIs). End
-      developers query UMG-owned content through each DSP's own public API,
-      not through any UMG-branded API surface. UMG itself publishes no
-      DSP-style public catalog API.
-    humanURL: https://www.universalmusic.com
-    baseURL: https://www.universalmusic.com
-    tags:
-      - Catalog
-      - DDEX
-      - Distribution
-      - DSP
-      - Metadata
-    properties:
-      - type: ReferenceStandard
-        url: https://ddex.net/
-      - type: PartnerProgram
-        url: https://www.universalmusic.com/contact/
-
   - aid: universal-music-group:partner-7digital
     name: 7digital UMG Catalog API (Partner Surface)
     description: >-
@@ -193,35 +153,6 @@ apis:
         url: https://7digital.gitbook.io/api-doc
       - type: PartnerOf
         url: https://www.7digital.com
-
-  - aid: universal-music-group:ai-licensing-program
-    name: UMG AI Licensing Program
-    description: >-
-      UMG's "Artist Centric AI" framework governs licensed access to UMG's
-      recordings and compositions by generative-AI music platforms. The
-      program is operated as a series of bilateral commercial agreements,
-      not as a self-serve developer program. As of 2025-2026, announced
-      partners include Udio (licensed generative platform with catalog
-      training and remixing rights), Splice (AI music tools for artists),
-      SoundLabs, KLAY Vision, ProRata, BandLab Technologies (ethical AI
-      framework), YouTube (AI Music Principles), TikTok, Meta, and KDDI.
-      Liquidax Capital co-develops UMG's AI patent portfolio (15+ filings
-      across musical collaboration, multimedia content, music & health,
-      AI threat protection, and rights management). No public OpenAPI,
-      no token issuance, no sandbox.
-    humanURL: https://www.universalmusic.com
-    baseURL: https://www.universalmusic.com
-    tags:
-      - AI
-      - Generative Music
-      - Licensing
-      - Partnerships
-      - Rights Management
-    properties:
-      - type: PartnerProgram
-        url: https://www.universalmusic.com/contact/
-      - type: PressRoom
-        url: https://www.universalmusic.com/news/
 
   - aid: universal-music-group:github-org
     name: Universal-Music-Group GitHub Organization
@@ -398,4 +329,4 @@ maintainers:
     email: kin@apievangelist.com
 
 created: '2026-05-23'
-modified: '2026-05-23'
+modified: '2026-07-25'
