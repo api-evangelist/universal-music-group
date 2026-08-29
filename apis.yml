@@ -1,6 +1,18 @@
 aid: universal-music-group
 name: Universal Music Group
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: unknown
+  commercial: true
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - pricing
+  - repository-unlicensed
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -176,6 +188,10 @@ apis:
         url: https://api.github.com/users/Universal-Music-Group
 
 common:
+  - type: IssueTracker
+    url: https://github.com/api-evangelist/universal-music-group/issues
+  - type: SecurityPolicy
+    url: https://github.com/api-evangelist/universal-music-group/tree/main/security
   - type: DomainSecurity
     url: security/universal-music-group-domain-security.yml
   - type: Website
